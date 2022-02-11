@@ -1,14 +1,21 @@
-<%= form_for @post do |form| %>
-  <%= form.label :message %>
-  <%= form.text_field :message, placeholder: "What's on your mind?" %>
+<section class='top-nav'>
+BookFace :]
+</section>
 
-  <%= form.submit "Submit" %>
-<% end %>
+<section class='enter-post'>  
+  <%= form_for @post do |form| %>
+    <%= form.text_field :message, placeholder: "What's on your mind?" %>
+
+    <%= form.submit "Submit" %>
+  <% end %>
+</section>
 
 <% @posts.each do |post| %>
-  <div class='post'> 
-    <p><%= post.message %></p>
-    <p><%= post.created_at.strftime("%-d %b %Y" + ' at ' + "%H:%M") %></p>
-    <%= link_to 'Delete', post, :method => :delete %>
-  </div>
+   <a href=<%="/posts/#{post.id}/"%>>
+    <section class='post'>
+      <p class='post-user'>Namey McName</p>
+      <p class='post-time'><%= post.created_at.strftime("%-d %b %Y" + ' at ' + "%H:%M") %></p>
+      <p class='post-message'><%= post.message %></p>
+    </section>
+  </a>
 <% end %>

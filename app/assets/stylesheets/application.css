@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   background-color: grey;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ a {
+   text-decoration: none;
+   color: black;
+ }
+
+ p {
+   background-color: ivory;
+ }
+
+ section {
+   background-color: ivory;
+   border: solid;
+   border-color: ivory;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 30px;
+ }
+
+ .top-nav {
+   width: 100%;
+   border-radius: 0px;
+   background-color: blue;
+   margin: 0%;
+   color: ivory
+ }
+
+ .post-time {
+   font-size: 50%;
+ }
+
+ input {
+   border: none;
+   align-self: center;
+   background-color: ivory;
+   width: 100%;
+ }
